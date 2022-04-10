@@ -1,0 +1,14 @@
+﻿@model Customer
+
+@{
+    ViewData["Title"] = "Customer Registration";
+}
+
+<h2>Customer Registration</h2>
+<br />
+
+<form asp-action="CustomerRegistrationForm" asp-controller="Customer">
+    First Name : <input type="text" asp-for="FirstName" /><br /><br />
+    Last Name  : <input type="text" asp-for="LastName" /><br /><br />
+    <input type="submit" value="Submit" style="background-color:black; color:white; padding:5px 5px 5px 5px;" />
+</form>

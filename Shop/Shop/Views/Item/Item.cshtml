@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Item>
+
+@{
+    ViewData["Title"] = "Items";
+}
+
+<h2>Items</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemPrice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemPrice)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<a asp-action="ItemRegistration" style="text-decoration: none; font-weight: bold; color: deepskyblue;">Create New</a>

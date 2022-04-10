@@ -1,0 +1,15 @@
+﻿@model Supplier
+
+@{
+    ViewData["Title"] = "Spplier Registration";
+}
+
+<h2>Spplier Registration</h2>
+<br />
+
+<form asp-action="SupplierRegistrationForm" asp-controller="Supplie">
+    First Name : <input type="text" asp-for="FirstName" name="FirstName" /><br /><br />
+    Last Name  : <input type="text" asp-for="LastName" name="LastName" /><br /><br />
+    Tel  : <input type="text" asp-for="Tel" name=""Tel" /><br /><br />
+    <input type="submit" value="Submit" style="background-color:black; color:white; padding:5px 5px 5px 5px;" />
+</form>

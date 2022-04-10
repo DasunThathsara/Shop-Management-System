@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Shop.Models.Supplier>
+
+@{
+    ViewData["Title"] = "Suppliers";
+}
+
+<h2>Suppliers</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tel)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tel)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<br />
+<a asp-action="CustomerRegistration" style="text-decoration:none; font-weight:bold; color:deepskyblue;">Create New</a>

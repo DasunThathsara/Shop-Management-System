@@ -1,0 +1,14 @@
+﻿@model Item
+
+@{
+    ViewData["Title"] = "Item Registration";
+}
+
+<h2>Item Registration</h2>
+<br />
+
+<form asp-action="ItemRegistrationForm" asp-controller="Item">
+    Item Name  : <input type="text" asp-for="ItemName" /><br /><br />
+    Item Price : <input type="text" asp-for="ItemPrice" /><br /><br />
+    <input type="submit" value="submit" style="background-color:black; color:white; padding:5px 5px 5px 5px;" />
+</form>
